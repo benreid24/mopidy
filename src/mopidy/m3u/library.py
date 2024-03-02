@@ -1,7 +1,6 @@
 from mopidy import backend
 
-from . import playlists
-from . import translator
+from . import playlists, translator
 
 
 class M3ULibraryProvider(backend.LibraryProvider):

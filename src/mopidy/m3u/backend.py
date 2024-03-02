@@ -7,8 +7,7 @@ import pykka
 from mopidy import backend
 from mopidy.types import UriScheme
 
-from . import library
-from . import playlists
+from . import library, playlists
 
 if TYPE_CHECKING:
     from mopidy.audio import AudioProxy
