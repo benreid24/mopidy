@@ -1,5 +1,3 @@
-import logging
-
 from mopidy import backend
 
 from . import playlists

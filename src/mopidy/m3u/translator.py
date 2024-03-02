@@ -4,7 +4,7 @@ import os
 import urllib.parse
 from collections.abc import Iterable
 from pathlib import Path
-from typing import IO, List
+from typing import IO
 
 from mopidy.internal import path
 from mopidy.models import Playlist, Ref, Track
@@ -51,7 +51,7 @@ def path_to_ref(path: Path) -> Ref:
     return Ref.playlist(uri=path_to_uri(path), name=name_from_path(path))
 
 
-def refs_to_tracks(refs: Iterable[Ref | Track] | None)-> List[Track]:
+def refs_to_tracks(refs: Iterable[Ref | Track] | None)-> list[Track]:
     if refs is None:
         refs = []
     return [Track(uri=item.uri, name=item.name) for item in refs]
